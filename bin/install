@@ -1,0 +1,4 @@
+
+bundle install
+npm install
+cd fe && bower install
