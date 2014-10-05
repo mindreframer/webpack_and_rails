@@ -1,13 +1,13 @@
 ## Test app for Webpack + Rails integration
-  (https://www.reinteractive.net/posts/213-rails-with-webpack-why-and-how)
+  https://www.reinteractive.net/posts/213-rails-with-webpack-why-and-how
 
 
-  ## Used:
+  Used:
 
     - https://github.com/sporto/assets-webpack-plugin
     - lib/webpack_integration.rb
 
-  ## Webpack (general)
+  Webpack (general)
 
     - https://github.com/petehunt/webpack-howto
     - http://webpack.github.io/docs/optimization.html
@@ -20,8 +20,8 @@
 
 # Requirements
 
-  Ruby > 1.9
-  Node.js + bower
+  - Ruby > 1.9
+  - Node.js + bower
 
 # Installation
     git clone  git@github.com/mindreframer/webpack_and_rails.git
