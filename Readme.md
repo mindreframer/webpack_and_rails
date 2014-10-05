@@ -8,7 +8,7 @@
     - lib/webpack_integration.rb
 
   Webpack (general)
-
+    - https://gitter.im/webpack/webpack -> CHAT!
     - https://github.com/petehunt/webpack-howto
     - http://webpack.github.io/docs/optimization.html
     - http://webpack.github.io/docs/stylesheets.html
@@ -17,6 +17,8 @@
   Webpack Examples:
 
     - https://github.com/webpack/webpack/tree/master/examples
+
+    - https://github.com/srn/react-webpack-boilerplate (great example for production / dev settings)
 
 # Requirements
 
@@ -35,3 +37,9 @@
 
   - https://www.npmjs.org/package/webpackify
 
+
+
+## Great Intros
+
+  - http://web-design-weekly.com/2014/09/24/diving-webpack/
+  - http://peerigon.github.io/presentations/2014-07-09-MNUG-webpack/

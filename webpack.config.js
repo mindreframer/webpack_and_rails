@@ -8,8 +8,6 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // common files
 var webpack = require('webpack');
-var commonsPlugin =
-  new webpack.optimize.CommonsChunkPlugin('common.js');
 
 
 module.exports = {
@@ -22,9 +20,8 @@ module.exports = {
         //path: path.join(__dirname, 'app', 'assets', 'javascripts'),
         //filename: "[name]-bundle.js",
         path: path.join(__dirname, "public", "webpack", "js"),
-        //filename: "[name]-bundle-[hash].js",
-        filename: "[name]-bundle.js",
-        chunkFilename: "[id].js",
+        filename: "[name]-bundle-[hash].js",
+        chunkFilename: "app.[id].[chunkhash].js",
         publicPath: "/webpack/js/"
     },
     plugins: [
@@ -34,8 +31,8 @@ module.exports = {
             path: path.join(__dirname, 'app', 'views'),
             filename: 'webpack-assets.json',
         }),
-        new ExtractTextPlugin("[name].css"), // for css
-        commonsPlugin
+        new ExtractTextPlugin("[name]-[hash].css"), // for css
+        new webpack.optimize.CommonsChunkPlugin('common.js')
     ],
     module: {
         loaders: [
@@ -52,7 +49,10 @@ module.exports = {
             { test: /\.woff$/,   loader: "url-loader?prefix=font/&limit=5000" },
             { test: /\.coffee$/, loader: 'coffee-loader' },
             { test: /\.js$/, loader: 'jsx-loader?harmony' },
-            { test: /\.png$/, loader: "file-loader" }
+            {
+                test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+                loader: "file-loader"
+            }
         ]
     },
     resolve: {
