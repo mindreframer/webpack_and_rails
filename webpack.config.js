@@ -51,7 +51,8 @@ module.exports = {
             },
             { test: /\.woff$/,   loader: "url-loader?prefix=font/&limit=5000" },
             { test: /\.coffee$/, loader: 'coffee-loader' },
-            { test: /\.js$/, loader: 'jsx-loader?harmony' } // loaders can take parameters as a querystring
+            { test: /\.js$/, loader: 'jsx-loader?harmony' },
+            { test: /\.png$/, loader: "file-loader" }
         ]
     },
     resolve: {
