@@ -51,7 +51,7 @@ module.exports = {
             { test: /\.js$/, loader: 'jsx-loader?harmony' },
             {
                 test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-                loader: "file-loader"
+                loader: "file-loader?name=[path][name]-[hash].[ext]&size=6"
             }
         ]
     },
