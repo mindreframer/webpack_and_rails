@@ -9,4 +9,16 @@ module WebpackIntergration
     json = JSON.parse(file)
     json[bundle]
   end
+
+
+  def self.generate_manifest
+    res = {}
+    Dir['public/webpack/**/**/**'].each do |f|
+      next if File.directory?(f)
+      key      = f.gsub('public/webpack/', '')
+      key      = key.gsub(/-[a-f\d]*(\.)/, '.')
+      value    = f.sub('public', '')
+      res[key] = value
+    end
+  end
 end
