@@ -9,6 +9,7 @@
 
 
   Used:
+
     - lib/webpack_integration.rb (on-the-fly manifest generation + fuzzy matching for bundled files (also images!)) from any Ruby / Rails app
 
 
