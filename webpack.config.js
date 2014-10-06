@@ -1,13 +1,10 @@
-var path           = require("path");
-var SaveAssetsJson = require('assets-webpack-plugin');
+var path    = require("path");
+var webpack = require('webpack');
 
 
 // http://webpack.github.io/docs/stylesheets.html
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-
-// common files
-var webpack = require('webpack');
 
 production_paths = {
     output_filename:      "[name]-bundle-[hash].js",
@@ -33,18 +30,12 @@ module.exports = {
         invoices: "./fe/ap/invoices/entry.js",
     },
     output: {
-        //path: path.join(__dirname, 'app', 'assets', 'javascripts'),
-        //filename: "[name]-bundle.js",
-        path:          path.join(__dirname, "public", "webpack", "js"),
+        path:          path.join(__dirname, "public", "webpack"),
         filename:      file_paths.output_filename,
         chunkFilename: file_paths.output_chunkFilename,
-        publicPath:    "/webpack/js/"
+        publicPath:    "/webpack/"  // for img paths in css-urls
     },
     plugins: [
-        new SaveAssetsJson({
-            path: path.join(__dirname, 'app', 'views'),
-            filename: 'webpack-assets.json',
-        }),
         new ExtractTextPlugin( file_paths.css_filename ),
         new webpack.optimize.CommonsChunkPlugin( file_paths.common_filename )
     ],
