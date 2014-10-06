@@ -4,12 +4,12 @@
   <title>MyApp</title>
   <%= stylesheet_link_tag     webpack_file('clients.css'), media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag  webpack_file('common.js'), 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag  webpack_file('clients-bundle.js') %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
 
+<%= javascript_include_tag  webpack_file('clients-bundle.js') %>
 </body>
 </html>

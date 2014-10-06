@@ -1,4 +1,5 @@
 require('./styles.less');
-//require('bower/react/react');
+React = require('bower/react/react');
 
 console.log('invoices bundle here');
+
