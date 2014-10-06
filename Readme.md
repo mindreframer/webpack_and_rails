@@ -2,10 +2,15 @@
   https://www.reinteractive.net/posts/213-rails-with-webpack-why-and-how
 
 
-  Used:
+  Webpack with
 
-    - https://github.com/sporto/assets-webpack-plugin
-    - lib/webpack_integration.rb
+    - text-extraction for CSS files
+    - will generate files into public/webpack
+
+
+  Used:
+    - lib/webpack_integration.rb (on-the-fly manifest generation + fuzzy matching for bundled files (also images!)) from any Ruby / Rails app
+
 
   Webpack (general)
 
