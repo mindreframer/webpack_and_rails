@@ -8,6 +8,7 @@
     - lib/webpack_integration.rb
 
   Webpack (general)
+
     - https://gitter.im/webpack/webpack -> CHAT!
     - https://github.com/petehunt/webpack-howto
     - http://webpack.github.io/docs/optimization.html
@@ -26,6 +27,7 @@
   - Node.js + bower
 
 # Installation
+
     git clone  git@github.com/mindreframer/webpack_and_rails.git
     cd webpack_and_rails
 
