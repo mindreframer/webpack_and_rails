@@ -9,6 +9,22 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 // common files
 var webpack = require('webpack');
 
+production_paths = {
+    output_filename:      "[name]-bundle-[hash].js",
+    output_chunkFilename: "app.[id]-[chunkhash].js",
+    css_filename:         "[name]-[hash].css",
+    common_filename:      'common-[hash].js',
+}
+
+development_paths = {
+    output_filename:      "[name]-bundle.js",
+    output_chunkFilename: "app.[id].js",
+    css_filename:         "[name].css",
+    common_filename:      'common.js',
+}
+
+file_paths = development_paths; // or production_paths
+
 
 module.exports = {
     context: __dirname,
@@ -19,36 +35,41 @@ module.exports = {
     output: {
         //path: path.join(__dirname, 'app', 'assets', 'javascripts'),
         //filename: "[name]-bundle.js",
-        path: path.join(__dirname, "public", "webpack", "js"),
-        filename: "[name]-bundle-[hash].js",
-        chunkFilename: "app.[id].[chunkhash].js",
-        publicPath: "/webpack/js/"
+        path:          path.join(__dirname, "public", "webpack", "js"),
+        filename:      file_paths.output_filename,
+        chunkFilename: file_paths.output_chunkFilename,
+        publicPath:    "/webpack/js/"
     },
     plugins: [
-
-
         new SaveAssetsJson({
             path: path.join(__dirname, 'app', 'views'),
             filename: 'webpack-assets.json',
         }),
-        new ExtractTextPlugin("[name]-[hash].css"), // for css
-        new webpack.optimize.CommonsChunkPlugin('common.js')
+        new ExtractTextPlugin( file_paths.css_filename ),
+        new webpack.optimize.CommonsChunkPlugin( file_paths.common_filename )
     ],
     module: {
         loaders: [
             {
                 test: /\.less$/,
-                //loader: "style-loader!css-loader!less-loader",
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader"),
-            }, // use ! to chain loaders
+            },
             {
                 test: /\.css$/,
-                //loader: 'style-loader!css-loader'
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
             },
-            { test: /\.woff$/,   loader: "url-loader?prefix=font/&limit=5000" },
-            { test: /\.coffee$/, loader: 'coffee-loader' },
-            { test: /\.js$/, loader: 'jsx-loader?harmony' },
+            {
+                test: /\.coffee$/,
+                loader: 'coffee-loader'
+            },
+            {
+                test: /\.js$/,
+                loader: 'jsx-loader?harmony'
+            },
+            {
+                test: /\.woff$/,
+                loader: "url-loader?prefix=font/&limit=5000"
+            },
             {
                 test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
                 loader: "file-loader?name=[path][name]-[hash].[ext]&size=6"
