@@ -1,58 +1,47 @@
 .user-mention,
 .team-mention {
-  font-weight: bold;
-
-  white-space: nowrap;
-
   color: #333;
+  white-space: nowrap;
+  font-weight: bold;
 }.muted-link {
   color: #777;
 }.muted-link:hover {
-  text-decoration: none;
-
   color: #4183C4;
+  text-decoration: none;
 }.pagination:before {
   display: table;
-
   content: '';
 }.pagination:after {
   display: table;
   clear: both;
-
   content: '';
 }.pagination a,
 .pagination span,
 .pagination em {
-  font-size: 13px;
-  font-weight: bold;
-  font-style: normal;
-
   position: relative;
-
   float: left;
-
   margin-left: -1px;
   padding: 7px 12px;
-
+  border: 1px solid #E5E5E5;
+  background: #FFF;
+  color: #4183C4;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
   cursor: pointer;
+
+   -khtml-user-select: none;
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-
-  color: #4183C4;
-  border: 1px solid #E5E5E5;
-  background: #FFF;
-
-   -khtml-user-select: none;
-  -webkit-touch-callout: none;
 }.pagination a:first-child,
 .pagination span:first-child,
 .pagination em:first-child {
   margin-left: 0;
-
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }.pagination a:last-child,
@@ -67,47 +56,39 @@
 .pagination em:hover,
 .pagination em:focus {
   z-index: 2;
-
-  text-decoration: none;
-
   border-color: #E5E5E5;
   background-color: #E7E7E7;
+  text-decoration: none;
 }.pagination .selected {
   z-index: 3;
 }.pagination .current,
 .pagination .current:hover {
   z-index: 3;
-
-  color: #FFF;
   border-color: #4183C4;
   background-color: #4183C4;
+  color: #FFF;
 }.pagination .gap,
 .pagination .disabled,
 .pagination .gap:hover,
 .pagination .disabled:hover {
-  cursor: default;
-
-  color: #D3D3D3;
   background-color: #FAFAFA;
+  color: #D3D3D3;
+  cursor: default;
 }.ajax_paginate {
   display: block;
-
   margin-top: 20px;
 }.ajax_paginate a {
   display: block;
   float: none;
-
   padding: 6px;
-
   text-align: center;
 }.ajax_paginate.loading a {
-  text-indent: -3000px;
-
   border-color: #C5C5C5;
   background-color: #EAEAEA;
   background-image: url(/assets/spinners/octocat-spinner-16px-EAF2F5-51a410020c7197f8c4df78e79d28a05dca25d42014cd95e13b232cd2ef89109c.gif);
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  text-indent: -3000px;
 }@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
   .ajax_paginate.loading a {
     background-image: url(/assets/spinners/octocat-spinner-32-EAF2F5-0bdc57d34b85c4a4de9d0d1db10cd70e8a95f33ff4f46c5a8c48b4bf4e5a9abe.gif);
@@ -116,23 +97,18 @@
 }.paginate-container {
   margin-top: 20px;
   margin-bottom: 15px;
-
   text-align: center;
 }.paginate-container .pagination {
   display: inline-block;
 }.state {
-  font-weight: bold;
-  line-height: 20px;
-
   display: inline-block;
-
   padding: 4px 8px;
-
-  text-align: center;
-
-  color: #FFF;
   border-radius: 3px;
   background-color: #999;
+  color: #FFF;
+  text-align: center;
+  font-weight: bold;
+  line-height: 20px;
 }.state-open,
 .state-proposed,
 .state-reopened {
