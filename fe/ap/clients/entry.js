@@ -1,7 +1,8 @@
 require('./styles.css');
-var React = require('bower/react/react');
+var React  = require('react');
+var JQuery = require('jquery');
 
-console.log('clients bundle here, updating it, working great');
+console.log('clients bundle here, updating it');
 
 HelloWorld = React.createClass({
   render: function(){

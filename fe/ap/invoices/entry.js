@@ -1,5 +1,5 @@
 require('./styles.less');
-React = require('bower/react/react');
+var React  = require('react');
+var JQuery = require('jquery');
 
 console.log('invoices bundle here');
-
