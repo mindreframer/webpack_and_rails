@@ -75,6 +75,7 @@ module.exports = {
             // vendorized files
             jquery: path.join('bower', 'jquery/dist/jquery'),
             react:  path.join('bower', 'react/react'),
+            d3:     path.join('bower', 'd3/d3'),
 
         },
         // you can now require('file') instead of require('file.coffee')
