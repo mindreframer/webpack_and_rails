@@ -1,146 +1,146 @@
 .user-mention,
 .team-mention {
-  font-weight : bold;
+  font-weight: bold;
 
-  white-space : nowrap;
+  white-space: nowrap;
 
-  color : #333;
+  color: #333;
 }.muted-link {
-  color : #777;
+  color: #777;
 }.muted-link:hover {
-  text-decoration : none;
+  text-decoration: none;
 
-  color : #4183C4;
+  color: #4183C4;
 }.pagination:before {
-  display : table;
+  display: table;
 
-  content : '';
+  content: '';
 }.pagination:after {
-  display : table;
-  clear : both;
+  display: table;
+  clear: both;
 
-  content : '';
+  content: '';
 }.pagination a,
 .pagination span,
 .pagination em {
-  font-size : 13px;
-  font-weight : bold;
-  font-style : normal;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: normal;
 
-  position : relative;
+  position: relative;
 
-  float : left;
+  float: left;
 
-  margin-left : -1px;
-  padding : 7px 12px;
+  margin-left: -1px;
+  padding: 7px 12px;
 
-  cursor : pointer;
-  -webkit-user-select : none;
-     -moz-user-select : none;
-      -ms-user-select : none;
-          user-select : none;
-  vertical-align : middle;
-  white-space : nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 
-  color : #4183C4;
-  border : 1px solid #E5E5E5;
-  background : #FFF;
+  color: #4183C4;
+  border: 1px solid #E5E5E5;
+  background: #FFF;
 
-   -khtml-user-select : none;
-  -webkit-touch-callout : none;
+   -khtml-user-select: none;
+  -webkit-touch-callout: none;
 }.pagination a:first-child,
 .pagination span:first-child,
 .pagination em:first-child {
-  margin-left : 0;
+  margin-left: 0;
 
-  border-top-left-radius : 3px;
-  border-bottom-left-radius : 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }.pagination a:last-child,
 .pagination span:last-child,
 .pagination em:last-child {
-  border-top-right-radius : 3px;
-  border-bottom-right-radius : 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }.pagination a:hover,
 .pagination a:focus,
 .pagination span:hover,
 .pagination span:focus,
 .pagination em:hover,
 .pagination em:focus {
-  z-index : 2;
+  z-index: 2;
 
-  text-decoration : none;
+  text-decoration: none;
 
-  border-color : #E5E5E5;
-  background-color : #E7E7E7;
+  border-color: #E5E5E5;
+  background-color: #E7E7E7;
 }.pagination .selected {
-  z-index : 3;
+  z-index: 3;
 }.pagination .current,
 .pagination .current:hover {
-  z-index : 3;
+  z-index: 3;
 
-  color : #FFF;
-  border-color : #4183C4;
-  background-color : #4183C4;
+  color: #FFF;
+  border-color: #4183C4;
+  background-color: #4183C4;
 }.pagination .gap,
 .pagination .disabled,
 .pagination .gap:hover,
 .pagination .disabled:hover {
-  cursor : default;
+  cursor: default;
 
-  color : #D3D3D3;
-  background-color : #FAFAFA;
+  color: #D3D3D3;
+  background-color: #FAFAFA;
 }.ajax_paginate {
-  display : block;
+  display: block;
 
-  margin-top : 20px;
+  margin-top: 20px;
 }.ajax_paginate a {
-  display : block;
-  float : none;
+  display: block;
+  float: none;
 
-  padding : 6px;
+  padding: 6px;
 
-  text-align : center;
+  text-align: center;
 }.ajax_paginate.loading a {
-  text-indent : -3000px;
+  text-indent: -3000px;
 
-  border-color : #C5C5C5;
-  background-color : #EAEAEA;
-  background-image : url(/assets/spinners/octocat-spinner-16px-EAF2F5-51a410020c7197f8c4df78e79d28a05dca25d42014cd95e13b232cd2ef89109c.gif);
-  background-repeat : no-repeat;
-  background-position : center center;
+  border-color: #C5C5C5;
+  background-color: #EAEAEA;
+  background-image: url(/assets/spinners/octocat-spinner-16px-EAF2F5-51a410020c7197f8c4df78e79d28a05dca25d42014cd95e13b232cd2ef89109c.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
 }@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
   .ajax_paginate.loading a {
-    background-image : url(/assets/spinners/octocat-spinner-32-EAF2F5-0bdc57d34b85c4a4de9d0d1db10cd70e8a95f33ff4f46c5a8c48b4bf4e5a9abe.gif);
-    background-size : 16px auto;
+    background-image: url(/assets/spinners/octocat-spinner-32-EAF2F5-0bdc57d34b85c4a4de9d0d1db10cd70e8a95f33ff4f46c5a8c48b4bf4e5a9abe.gif);
+    background-size: 16px auto;
   }
 }.paginate-container {
-  margin-top : 20px;
-  margin-bottom : 15px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 
-  text-align : center;
+  text-align: center;
 }.paginate-container .pagination {
-  display : inline-block;
+  display: inline-block;
 }.state {
-  font-weight : bold;
-  line-height : 20px;
+  font-weight: bold;
+  line-height: 20px;
 
-  display : inline-block;
+  display: inline-block;
 
-  padding : 4px 8px;
+  padding: 4px 8px;
 
-  text-align : center;
+  text-align: center;
 
-  color : #FFF;
-  border-radius : 3px;
-  background-color : #999;
+  color: #FFF;
+  border-radius: 3px;
+  background-color: #999;
 }.state-open,
 .state-proposed,
 .state-reopened {
-  background-color : #6CC644;
+  background-color: #6CC644;
 }.state-merged {
-  background-color : #6E5494;
+  background-color: #6E5494;
 }.state-closed {
-  background-color : #BD2C00;
+  background-color: #BD2C00;
 }.state-renamed {
-  background-color : #FFFA5D;
+  background-color: #FFFA5D;
 }
