@@ -1,6 +1,9 @@
 {
   "name": "test",
   "dependencies": {
-    "react": "~0.11.2"
+    "react": "~0.11.2",
+    "jquery": "~2.1.1",
+    "momentjs": "~2.8.3",
+    "numeraljs": "~1.5.3"
   }
 }
