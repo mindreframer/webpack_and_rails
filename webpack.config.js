@@ -72,6 +72,9 @@ module.exports = {
             ap:     path.join(__dirname, "fe", "ap"),
             shared: path.join(__dirname, "fe", "ap", "shared"),
             bower:  path.join(__dirname, "fe", "bower_components"),
+            // vendorized files
+            jquery: path.join('bower', 'jquery/dist/jquery'),
+            react:  path.join('bower', 'react/react'),
 
         },
         // you can now require('file') instead of require('file.coffee')
