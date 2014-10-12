@@ -43,6 +43,13 @@
     # will install gem + NPM packages + Bower packages
     bin/install
 
+    # start webpack
+    webpack --watch
+
+    # the changes in fe/ will be automatically compiled to the public/webpack folder
+
+
+
 
 ## Might consider
 
