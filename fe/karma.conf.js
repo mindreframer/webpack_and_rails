@@ -20,7 +20,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'fe/**/__test__/*Test.*'
+      '**/__test__/*Test.*'
     ],
 
     // list of files to exclude
@@ -30,7 +30,7 @@ module.exports = function(config) {
 
     // list of preprocessors
     preprocessors: {
-      'fe/**/__test__/*Test.*': ['webpack']
+      '**/__test__/*Test.*': ['webpack']
     },
 
     webpack: webpackConfig,

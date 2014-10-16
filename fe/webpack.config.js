@@ -26,11 +26,11 @@ file_paths = development_paths; // or production_paths
 module.exports = {
     context: __dirname,
     entry: {
-        clients:  "./fe/ap/clients/entry.js",
-        invoices: "./fe/ap/invoices/entry.js",
+        clients:  "./ap/clients/entry.js",
+        invoices: "./ap/invoices/entry.js",
     },
     output: {
-        path:          path.join(__dirname, "public", "webpack"),
+        path:          path.join(__dirname, '..', "public", "webpack"),
         filename:      file_paths.output_filename,
         chunkFilename: file_paths.output_chunkFilename,
         publicPath:    "/webpack/"  // for img paths in css-urls
@@ -69,9 +69,9 @@ module.exports = {
     },
     resolve: {
         alias: {
-            ap:     path.join(__dirname, "fe", "ap"),
-            shared: path.join(__dirname, "fe", "ap", "shared"),
-            bower:  path.join(__dirname, "fe", "bower_components"),
+            ap:     path.join(__dirname, "ap"),
+            shared: path.join(__dirname, "ap", "shared"),
+            bower:  path.join(__dirname, "bower_components"),
             // vendorized files
             jquery: path.join('bower', 'jquery/dist/jquery'),
             //react:  path.join('bower', 'react/react'),
