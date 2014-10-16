@@ -17,7 +17,7 @@
     # listen for changes in 'fe/' and automatically compile to 'public/webpack' folder
     make webpack
 
-    # run Tests with Karma
+    # run continuous tests with Karma on any change
     make karma
 
 
