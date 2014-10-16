@@ -1,3 +1,4 @@
+# http://facebook.github.io/react/docs/test-utils.html
 describe 'HelloWorld React Component', ->
   HelloWorld = require('../hello_world')
   React      = require('react')
