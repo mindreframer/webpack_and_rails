@@ -20,6 +20,8 @@
     # run continuous tests with Karma on any change
     make karma
 
+    # format CSS files in 'fe/' with CSScomb
+    make csscomb
 
 
 
