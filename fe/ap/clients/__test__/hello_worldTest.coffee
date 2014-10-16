@@ -1,5 +1,6 @@
 describe 'HelloWorld React Component', ->
   HelloWorld = require('../hello_world')
+  require('../entry')
 
   it "is present", ->
     expect(HelloWorld).toBeDefined()
