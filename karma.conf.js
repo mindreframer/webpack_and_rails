@@ -5,7 +5,9 @@ webpackConfig.cache = true
 // we need to remove all the "bundling"-configuration parameters
 delete webpackConfig.entry
 delete webpackConfig.output
-delete webpackConfig.plugins
+
+// this is super fragile, but I'm just removing the CommonChunks plugin...
+webpackConfig.plugins.splice(1,1)
 
 module.exports = function(config) {
   config.set({

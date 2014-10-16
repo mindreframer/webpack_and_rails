@@ -1,6 +1,15 @@
 React  = require('react');
 
 HelloWorld = React.createClass
-  render: ->
-    React.DOM.div({}, 'hello world for clients')
+  propTypes:
+    worldType: React.PropTypes.string
 
+  getDefaultProps: ->
+    worldType: 'dark'
+
+  render: ->
+    React.DOM.div({}, "hello #{this.props.worldType} world for clients")
+
+
+
+module.exports = HelloWorld
