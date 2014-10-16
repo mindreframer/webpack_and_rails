@@ -7,8 +7,14 @@ HelloWorld = React.createClass
   getDefaultProps: ->
     worldType: 'dark'
 
+  getInitialState: ->
+    type: this.props.worldType
+
+  onClick: ->
+    this.setState(type: 'clicked')
+
   render: ->
-    React.DOM.div({}, "hello #{this.props.worldType} world for clients")
+    React.DOM.div({onClick: this.onClick}, "hello #{this.state.type} world for clients")
 
 
 
