@@ -1,5 +1,35 @@
 ## Test app for Webpack + Rails integration
 
+# Requirements
+
+  - Ruby > 1.9
+  - Node.js + bower
+
+# Installation
+
+    git clone git@github.com/mindreframer/webpack_and_rails.git
+    cd webpack_and_rails
+
+    # will install Gems + NPM packages + Bower packages
+    bin/install
+
+    # start webpack,
+    # listen for changes in 'fe/' and automatically compile to 'public/webpack' folder
+    make webpack
+
+    # run Tests with Karma
+    make karma
+
+
+
+
+## Great Intros
+
+  - http://okonet.github.io/viennajs-webpack-introduction
+  - http://web-design-weekly.com/2014/09/24/diving-webpack/
+  - http://peerigon.github.io/presentations/2014-07-09-MNUG-webpack/
+
+
   - https://www.reinteractive.net/posts/213-rails-with-webpack-why-and-how
   - http://www.railsonmaui.com/blog/2014/10/02/integrating-webpack-and-the-es6-transpiler-into-an-existing-rails-project/
   - https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679
@@ -29,36 +59,3 @@
     - https://github.com/webpack/webpack/tree/master/examples
 
     - https://github.com/srn/react-webpack-boilerplate (great example for production / dev settings)
-
-# Requirements
-
-  - Ruby > 1.9
-  - Node.js + bower
-
-# Installation
-
-    git clone  git@github.com/mindreframer/webpack_and_rails.git
-    cd webpack_and_rails
-
-    # will install gem + NPM packages + Bower packages
-    bin/install
-
-    # start webpack
-    webpack --watch
-
-    # the changes in fe/ will be automatically compiled to the public/webpack folder
-
-
-
-
-## Might consider
-
-  - https://www.npmjs.org/package/webpackify
-
-
-
-## Great Intros
-
-  - http://okonet.github.io/viennajs-webpack-introduction
-  - http://web-design-weekly.com/2014/09/24/diving-webpack/
-  - http://peerigon.github.io/presentations/2014-07-09-MNUG-webpack/
