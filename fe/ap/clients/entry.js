@@ -12,5 +12,5 @@ HelloWorld = require('./hello_world')
 //test async loading of bigger JS parts
 require([], function() {
   var d3 = require('d3');
-  console.log(d3);
+  //console.log(d3);
 });
