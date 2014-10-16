@@ -36,6 +36,7 @@ module.exports = function(config) {
     webpack: webpackConfig,
 
     webpackServer: {
+        quiet: true, // remove the noise from webpack compilation, revert for more output
         stats: {
             colors: true
         }
