@@ -74,7 +74,8 @@ module.exports = {
             bower:  path.join(__dirname, "fe", "bower_components"),
             // vendorized files
             jquery: path.join('bower', 'jquery/dist/jquery'),
-            react:  path.join('bower', 'react/react'),
+            //react:  path.join('bower', 'react/react'),
+            react:  path.join('bower', 'react/react-with-addons'),
             d3:     path.join('bower', 'd3/d3'),
 
         },
