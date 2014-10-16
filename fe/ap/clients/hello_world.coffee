@@ -13,8 +13,14 @@ HelloWorld = React.createClass
   onClick: ->
     this.setState(type: 'clicked')
 
+  onMouseEnter: ->
+    this.setState(type: 'mouseEnter')
+
   render: ->
-    React.DOM.div({onClick: this.onClick}, "hello #{this.state.type} world for clients")
+    React.DOM.div({
+      onClick: this.onClick
+      onMouseEnter: this.onMouseEnter
+    }, "hello #{this.state.type} world for clients")
 
 
 

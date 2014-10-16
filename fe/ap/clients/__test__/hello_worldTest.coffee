@@ -25,3 +25,19 @@ describe 'HelloWorld React Component', ->
     TestUtils.Simulate.click(component.getDOMNode() )
     text = component.getDOMNode().textContent
     expect(text).toMatch('clicked')
+
+
+  it "can be mouse-over'ed", ->
+    component = TestUtils.renderIntoDocument(HelloWorld(worldType: 'bright'))
+
+    node = component.getDOMNode()
+    text = node.textContent
+    expect(text).toMatch('bright')
+    expect(text).not.toMatch('mouseEnter')
+
+    # mouse-over / enter
+    TestUtils.SimulateNative.mouseOver(node)
+
+    text = node.textContent
+    expect(text).toMatch('mouseEnter')
+
