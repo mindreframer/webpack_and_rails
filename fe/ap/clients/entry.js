@@ -1,14 +1,10 @@
 require('./styles');
-var React  = require('react');
-var JQuery = require('jquery');
 
+var JQuery = require('jquery');
 console.log('clients bundle here, updating it');
 
-HelloWorld = React.createClass({
-  render: function(){
-    return React.DOM.div({}, 'hello world for clients')
-  }
-})
+
+HelloWorld = require('./hello_world')
 
 React.renderComponent(HelloWorld(), document.getElementById('react-test'))
 
@@ -18,4 +14,3 @@ require([], function() {
   var d3 = require('d3');
   console.log(d3);
 });
-
