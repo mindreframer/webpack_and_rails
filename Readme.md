@@ -30,6 +30,7 @@
   - http://okonet.github.io/viennajs-webpack-introduction
   - http://web-design-weekly.com/2014/09/24/diving-webpack/
   - http://peerigon.github.io/presentations/2014-07-09-MNUG-webpack/
+  - http://slides.com/davidmason/packaging-commonjs-for-the-browser
 
 
   - https://www.reinteractive.net/posts/213-rails-with-webpack-why-and-how
