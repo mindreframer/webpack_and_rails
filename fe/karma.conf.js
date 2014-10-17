@@ -31,7 +31,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test_env.js',
       '**/**/__test__/*Test.*'
     ],
 
