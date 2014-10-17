@@ -8,11 +8,12 @@ webpackConfig.cache = true
 delete webpackConfig.entry
 delete webpackConfig.output
 
-
 // remove CommonChunks plugin...
 webpackConfig.plugins = webpackConfig.plugins.filter(function(e){ return !e.chunkName })
 // remove definePlugin with definitions
 webpackConfig.plugins = webpackConfig.plugins.filter(function(e){ return !e.definitions })
+// remove ignorePlugin with test-folder-regex
+webpackConfig.plugins = webpackConfig.plugins.filter(function(e){ return !e.resourceRegExp })
 
 // now indicate that we are in test ENV
 var definePlugin = new webpack.DefinePlugin({IS_TEST: true})

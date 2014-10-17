@@ -43,7 +43,9 @@ module.exports = {
 
         new webpack.DefinePlugin({
             IS_TEST: false,
-        })
+        }),
+        // ignore tests
+        new webpack.IgnorePlugin(/.*/, /__test__/)
     ],
     module: {
         loaders: [
