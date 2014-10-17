@@ -45,7 +45,8 @@ module.exports = {
             IS_TEST: false,
         }),
         // ignore tests
-        new webpack.IgnorePlugin(/.*/, /__test__/)
+        new webpack.IgnorePlugin(/.*/, /__test__/),
+        //new webpack.optimize.UglifyJsPlugin({ output: {comments: false} })
     ],
     module: {
         loaders: [
