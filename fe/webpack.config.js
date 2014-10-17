@@ -38,8 +38,8 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin( file_paths.css_filename ),
+        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin( file_paths.common_filename ),
-        new webpack.optimize.DedupePlugin()
     ],
     module: {
         loaders: [
@@ -69,6 +69,7 @@ module.exports = {
             }
         ],
         noParse: [
+            // /__test__/,
             /jquery/,
             /react/,
         ],

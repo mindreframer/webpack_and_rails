@@ -7,7 +7,9 @@ delete webpackConfig.entry
 delete webpackConfig.output
 
 // this is super fragile, but I'm just removing the CommonChunks plugin...
-webpackConfig.plugins.splice(1,1)
+
+webpackConfig.plugins.splice(1,2)
+//webpackConfig.module.noParse.splice(1,1)
 
 module.exports = function(config) {
   config.set({
@@ -20,7 +22,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '**/__test__/*Test.*'
+      '**/**/__test__/*Test.*'
     ],
 
     // list of files to exclude
@@ -30,7 +32,7 @@ module.exports = function(config) {
 
     // list of preprocessors
     preprocessors: {
-      '**/__test__/*Test.*': ['webpack']
+      '**/**/__test__/*Test.*': ['webpack']
     },
 
     webpack: webpackConfig,
