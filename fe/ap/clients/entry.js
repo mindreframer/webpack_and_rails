@@ -5,7 +5,7 @@ var React  = require('react');
 
 console.log('clients bundle here, updating it');
 HelloWorld = require('./hello_world')
-HelloWorld = require('./module_a')
+require('./module_a')
 
 
 // this
