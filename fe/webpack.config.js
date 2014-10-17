@@ -33,7 +33,8 @@ module.exports = {
         path:          path.join(__dirname, '..', "public", "webpack"),
         filename:      file_paths.output_filename,
         chunkFilename: file_paths.output_chunkFilename,
-        publicPath:    "/webpack/"  // for img paths in css-urls
+        publicPath:    "/webpack/",  // for img paths in css-urls
+        pathinfo:      true
     },
     plugins: [
         new ExtractTextPlugin( file_paths.css_filename ),
