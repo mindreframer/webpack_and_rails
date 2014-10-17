@@ -83,15 +83,16 @@ module.exports = {
     },
     resolve: {
         alias: {
-            ap:     path.join(__dirname, "ap"),
-            shared: path.join(__dirname, "ap", "shared"),
-            bower:  path.join(__dirname, "bower_components"),
+            ap:      path.join(__dirname, "ap"),
+            shared:  path.join(__dirname, "ap", "shared"),
+            bower:   path.join(__dirname, "bower_components"),
             // vendorized files
-            jquery: path.join('bower', 'jquery/dist/jquery'),
+            jquery:  path.join('bower', 'jquery/dist/jquery'),
             //react:  path.join('bower', 'react/react'),
-            react:  path.join('bower', 'react/react-with-addons'),
-            d3:     path.join('bower', 'd3/d3'),
-
+            react:   path.join('bower', 'react/react-with-addons'),
+            d3:      path.join('bower', 'd3/d3'),
+            moment:  path.join('bower', 'momentjs/moment'),
+            numeral: path.join('bower', 'numeraljs/numeral'),
         },
         // you can now require('file') instead of require('file.coffee')
         extensions: ['', '.js', '.json', '.coffee', '.css', '.less']
