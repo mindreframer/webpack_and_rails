@@ -1,15 +1,23 @@
 // Karma configuration
 var webpackConfig = require('./webpack.config.js')
 
+var webpack = require('webpack');
+
 webpackConfig.cache = true
 // we need to remove all the "bundling"-configuration parameters
 delete webpackConfig.entry
 delete webpackConfig.output
 
-// this is super fragile, but I'm just removing the CommonChunks plugin...
 
-webpackConfig.plugins.splice(1,2)
-//webpackConfig.module.noParse.splice(1,1)
+// remove CommonChunks plugin...
+webpackConfig.plugins = webpackConfig.plugins.filter(function(e){ return !e.chunkName })
+// remove definePlugin with definitions
+webpackConfig.plugins = webpackConfig.plugins.filter(function(e){ return !e.definitions })
+
+// now indicate that we are in test ENV
+var definePlugin = new webpack.DefinePlugin({IS_TEST: true})
+webpackConfig.plugins.push(definePlugin)
+
 
 module.exports = function(config) {
   config.set({
