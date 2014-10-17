@@ -1,4 +1,4 @@
 
 bundle install
-npm install
-cd fe && bower install
+cd fe && npm install && cd ..
+cd fe && bower install && cd ..
