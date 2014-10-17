@@ -1,7 +1,8 @@
 console.log('clients bundle here, updating it');
 // this exposes global libs
-require('./modules/install_get_module')()
+
 require('./modules/module_a')
+require('./modules/install_get_module')()
 
 
 require('./styles');
