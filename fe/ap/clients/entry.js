@@ -8,7 +8,7 @@ HelloWorld = require('./hello_world')
 require('./module_a')
 
 
-// this
+// this exposes global libs
 require('./install_get_module')()
 
 //React.renderComponent(HelloWorld(), document.getElementById('react-test'))
