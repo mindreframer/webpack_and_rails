@@ -19,6 +19,9 @@ webpackConfig.plugins = webpackConfig.plugins.filter(function(e){ return !e.reso
 var definePlugin = new webpack.DefinePlugin({IS_TEST: true})
 webpackConfig.plugins.push(definePlugin)
 
+// do watching with webpack
+webpackConfig.watch = true
+
 
 module.exports = function(config) {
   config.set({
@@ -31,8 +34,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '**/**/__test__/*Test.*'
+      'test/index.js'
     ],
+
+    preprocessors: {
+      'test/index.js': ['webpack']
+    },
 
     // list of files to exclude
     exclude: [
@@ -41,13 +48,13 @@ module.exports = function(config) {
 
     // list of preprocessors
     preprocessors: {
-      '**/**/__test__/*Test.*': ['webpack']
+      'test/index.js': ['webpack']
     },
 
     webpack: webpackConfig,
 
     webpackServer: {
-        //quiet: true, // remove the noise from webpack compilation, revert for more output
+        quiet: true, // remove the noise from webpack compilation, revert for more output
         stats: {
             colors: true
         }
