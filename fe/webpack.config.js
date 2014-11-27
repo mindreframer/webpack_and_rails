@@ -54,6 +54,10 @@ module.exports = {
                 loader: "style!css!less?outputStyle=expanded",
             },
             {
+                test: /\.styl$/,
+                loader: 'style!css!stylus-loader?outputStyle=expanded',
+            },
+            {
                 test: /\.css$/,
                 loader: "style!css?outputStyle=expanded",
             },
