@@ -26,8 +26,9 @@ file_paths = development_paths; // or production_paths
 module.exports = {
     context: __dirname,
     entry: {
-        clients:  "./ap/clients/entry.js",
-        invoices: "./ap/invoices/entry.js",
+        clients:         "./ap/clients/entry.js",
+        clients_styles:  "./ap/styles/clients.js",
+        invoices:        "./ap/invoices/entry.js",
     },
     output: {
         path:          path.join(__dirname, '..', "public", "webpack"),
@@ -38,7 +39,7 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.CommonsChunkPlugin( file_paths.common_filename ),
+        new webpack.optimize.CommonsChunkPlugin( file_paths.common_filename, ['clients', 'invoices'] ),
         new webpack.DefinePlugin({
             IS_TEST: false,
         }),

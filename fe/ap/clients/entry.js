@@ -7,8 +7,6 @@ if(!IS_TEST)
   // this exposes global libs
   require('./modules/install_get_module')()
 
-
-require('./styles');
 var JQuery     = require('jquery');
 var React      = require('react');
 var HelloWorld = require('./modules/hello_world')
