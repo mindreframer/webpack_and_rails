@@ -37,10 +37,8 @@ module.exports = {
         pathinfo:      true
     },
     plugins: [
-        new ExtractTextPlugin( file_paths.css_filename ),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin( file_paths.common_filename ),
-
         new webpack.DefinePlugin({
             IS_TEST: false,
         }),
@@ -52,11 +50,11 @@ module.exports = {
         loaders: [
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader"),
+                loader: "style!css!less?outputStyle=expanded",
             },
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
+                loader: "style!css?outputStyle=expanded",
             },
             {
                 test: /\.coffee$/,
