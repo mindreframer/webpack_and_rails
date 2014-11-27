@@ -6,6 +6,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="crazy-second-color">
+    some crazy second color
+  </div>
   <%= yield %>
   <%= javascript_include_tag  webpack_file('common.js'), 'data-turbolinks-track' => true %>
   <%= javascript_include_tag  webpack_file('clients-bundle.js') %>
