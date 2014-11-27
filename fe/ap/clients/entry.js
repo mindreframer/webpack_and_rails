@@ -15,7 +15,7 @@ var HelloWorld = require('./modules/hello_world')
 
 
 
-// //React.renderComponent(HelloWorld(), document.getElementById('react-test'))
+React.renderComponent(HelloWorld(), document.getElementById('react-test'))
 // // test async loading of bigger JS parts
 require([], function() {
   var d3 = require('d3');
